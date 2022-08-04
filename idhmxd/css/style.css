@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Maiden+Orange&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+	font-family: 'Maiden Orange', cursive;
+	display: block;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+}
+
+#bg {
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: 0;
+	position: fixed;
+	background: url(../images/bg.jpg) no-repeat fixed center;
+    background-size: cover;
+	filter: brightness(60%);
+}
+
+#idhaampedia {
+	width: 100%;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.header {
+	width: 90%;
+	display: block;
+	margin: 30px auto;
+	padding: 6px 0;
+	background: rgba(0,0,0, 0.8);
+	border-right: 20px solid #faa120;
+	border-left: 20px solid #faa120;
+	border-radius: 15px;
+}
+
+.logo {
+	width: 450px;
+    margin: 5px auto 2px auto;
+    display: block;
+}
+
+.content {
+	width: 90%;
+	display: block;
+	margin: -13px auto;
+	padding: 20px 0;
+}
+
+.box-content {
+	width: 360px;
+	display: inline-block;
+	margin: 25px;
+	background: rgba(255,255,255, 0.4);
+	border-left: 17px solid #faa120;
+	border-top: 17px solid #faa120;
+	border-bottom: 17px solid #faa120;
+	border-radius: 16px;
+}
+
+.kanan {
+	border-left: none;
+	border-right: 17px solid #faa120;
+	border-top: 17px solid #faa120;
+	border-bottom: 17px solid #faa120;
+}
+
+.img-content {
+	width: 360px;
+	height: 440px;
+	display: block;
+	margin: auto;
+}
+
+.btn-content {
+	font-family: 'Maiden Orange', cursive;
+	width: 250px;
+	height: auto;
+	display: block;
+	margin: 25px auto;
+	padding: 10px;
+	background: #faa120;
+	border: 1px solid #faa120;
+	color: #fff;
+	font-size: 2.9em;
+	border-radius: 8px;
+	outline: none;
+	cursor: pointer;
+	letter-spacing: 5px;
+}
+
+#login {
+	width: 100%;
+	height: 100%;
+	display: none;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(250,161,32, 0.8);
+}
+
+.login {
+	width: 100%;
+	height: auto;
+	display: block;
+	position: absolute;
+	margin: 0;
+	bottom: 0;
+	padding: 5px; 
+	background: #fff;
+}
+
+.txt-login {
+	display: block;
+	margin: 40px auto;
+	font-size: 3.7em;
+	color: rgba(250,161,32, 1);
+	letter-spacing: 2px;
+}
+
+.pilihan {
+	width: 90%;
+	display: block;
+	margin: 70px auto;
+}
+
+.box-pilihan {
+	width: 18%;
+	display: inline-block;
+	margin: 20px 100px;
+	cursor: pointer;
+}
+
+.img-box-pilihan {
+	width: 120px;
+	display: block;
+	margin: auto auto 20px auto;
+}
+
+.txt-box-pilihan {
+	display: block;
+	font-size: 2.5em;
+	color: rgba(250,161,32, 1);
+	letter-spacing: 2px;
+}
+
+.garis-pilihan {
+	display: block;
+	margin: 20px auto 50px auto;
+	width: 20%;
+	border: 2px solid rgba(250,161,32, 1);
+}
+
+.btn-pilihan {
+	font-family: 'Maiden Orange', cursive;
+	width: 270px;
+	height: auto;
+	display: block;
+	margin: 80px auto;
+	padding: 20px;
+	background: #faa120;
+	border: 1px solid #faa120;
+	color: #fff;
+	font-size: 2.9em;
+	border-radius: 8px;
+	outline: none;
+	cursor: pointer;
+	letter-spacing: 5px;
+}
+
+.loginnya {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    padding: 3px;
+    background: #fff;
+}
+
+.img-login {
+    width: 40px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.loginnya input, .loginnya select {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    padding: 9px 6px 9px 6px;
+    background: none;
+    border: none;
+    font-size: 0.9em;
+    color: #000;
+    border-bottom: 2px solid rgba(221, 162, 0, 1);
+    outline: none;
+}
+
+::placeholder {
+    color: #000;
+    opacity: 0.6;
+}
+
+.btn-login {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 20px auto 10px auto;
+    padding: 9px 6px 9px 6px;
+    background: none;
+    border: 1px solid rgba(221, 162, 0, 1);
+    border-radius: 3px;
+    font-size: 1em;
+    color: #000;
+    outline: none;
+    cursor: pointer;
+}
