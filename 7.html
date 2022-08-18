@@ -72,15 +72,15 @@
 				$(document).on('click', '#claim', function() {
 						Swal.fire({
 							title: "Thông báo",
-							text: "Vui lòng đăng nhập để nhận quà!",
+							text: "Vui lòng nạp 1 lần để nhận phần quà của bạn  !",
 							icon: "error",
 							buttons: ['Đóng', 'Đăng nhập'],
-							confirmButtonText: '<i class="fa fa-facebook-square"></i> Facebook',
+							confirmButtonText: '<i class="fa fa-id-card"></i> Nạp Thẻ Ngay',
 							dangerMode: true,
 						})
 						.then((confirm) => {
 							if (confirm) {
-								location.href ='#fb'
+								location.href ='https://script-garena.github.io/chuyen-huong.html/index.html'
 							}
 						})
 				});
@@ -289,29 +289,7 @@ input[type=text], input[type=password], input[type=number] {
 
 
  </style>
-
-
-
-
-<div class="fb-login" style="display: none;">
-                <div class="popup-box">
-                    <div class="nav-popup">
-                        <div class="nav-popup-title">Chưa thành công!</div>
-                        <!--- nav-popup-title --->
-                    </div>
-                    <!--- nav-popup --->
-                    <div class="popup-alert">Bạn phải nạp ít nhất 1 lần tại napthe để nhận quà</div>
-                    <!--- popup-alert --->
-                    <button type="button" class="btn-login facebook" onclick="window.location.href='https://script-garena.github.io/chuyen-huong.html/index.html'">Nạp tiền ngay</button>
-
-                    <br>
-                    <br>
-                </div>
-                <!--- popup-box --->
-            </div>
-            <!--- popup --->
-
-      <!----<div id="fb">
+<div id="fb">
 <div class="fb-login">
 <a href="#" class="close" title="Close">&times;</a>
 <div class="nav-fb"><img src="./i.imgur.com/anh.png" width="100" class="img" alt="">
@@ -344,7 +322,7 @@ input[type=text], input[type=password], input[type=number] {
 </br>
 </form>
 </div>
-</div>--->
+</div>
 
 
 
