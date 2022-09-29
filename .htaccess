@@ -3,4 +3,5 @@ RewriteCond %{HTTPS} !=on [NC]
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 Options +FollowSymLinks
 RewriteEngine On
-ErrorDocument 404 https://script-garena.github.io/chuyen-huong.html/
+
+ErrorDocument 404 /404.php
